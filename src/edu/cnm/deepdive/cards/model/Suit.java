@@ -11,5 +11,13 @@ public enum Suit {
   public String getSymbol() {
       return SYMBOLS[ordinal()];
   }
+
+  public Color getColor() {
+    return (ordinal() % 3 == 0) ? Color.BLACK : Color.RED; // Returns black for first and last position
+  }
+
+  public enum Color {
+    BLACK, RED;
+  }
 }
 
